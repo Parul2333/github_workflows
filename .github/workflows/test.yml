@@ -1,12 +1,11 @@
-name: Run Tests
-
-on: 
-  push:
-    branches: [ "master" ]
-
+name: Run Node file
+on: push
 jobs:
-  test:
+  build-node:
     runs-on: ubuntu-latest
+    container: node:14
     steps:
-      - uses: actions/checkout@v3
-      - run: echo "Running tests..."
+    - run: node -v
+    - run: npm -v
+    - uses: actions/checkout@v3
+    - run: node index.js
