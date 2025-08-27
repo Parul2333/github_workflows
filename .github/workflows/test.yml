@@ -1,11 +1,11 @@
 name: Run Node file
 on: push
 jobs:
-  build-node:
-    runs-on: ubuntu-latest
-    container: node:14
-    steps:
-    - run: node -v
-    - run: npm -v
-    - uses: actions/checkout@v3
-    - run: node index.js
+build-node:
+runs-on: ubuntu-latest
+container: node:14
+steps:
+-run: node-version
+run: npm-version
+-uses: actions/checkout@v3
+-run: node index.js
